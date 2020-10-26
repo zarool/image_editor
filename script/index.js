@@ -78,5 +78,6 @@ buttons[0].addEventListener("click", () => {
 //new image
 
 $('#newImg').change(function () {
+    resetArray();
     readURL(this);
 });
