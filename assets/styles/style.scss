@@ -1,0 +1,132 @@
+ $bg: #0D1B2A;
+ $secondary: #1B263B;
+ $text: #E0E1DD;
+
+ $colorA:#415A77;
+ $colorB: #778DA9;
+ $colorC: #f15d22;
+
+
+ body {
+     background-color: $bg;
+
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 1.25rem;
+     color: $text;
+
+
+     .container {
+         margin: auto;
+
+         display: grid;
+         width: 60%;
+         justify-content: center;
+
+
+         border: 1px solid $colorA;
+     }
+
+     .box {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+     }
+
+     .btn {
+
+         background: $colorB;
+         border: none;
+         border-radius: 5px;
+         color: $text;
+         cursor: pointer;
+         display: inline-block;
+         font-size: inherit;
+         font-weight: 500;
+         margin: 0.8rem;
+         outline: none;
+         padding: 1rem 50px;
+         position: relative;
+         transition: all 0.3s;
+         vertical-align: middle;
+
+         &:hover {
+             background-color: darken($colorC, 10%);
+         }
+     }
+
+     .options {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+
+         p {
+             margin: 5px 0;
+         }
+     }
+
+     #img-canvas {
+         margin: 0;
+         width: 80%;
+     }
+ }
+
+ .slider {
+     -webkit-appearance: none;
+     width: 50%;
+     height: 25px;
+     background: $colorB;
+     outline: none;
+     opacity: 0.7;
+     -webkit-transition: .2s;
+     transition: opacity .2s;
+
+     &:hover {
+         opacity: 1;
+     }
+
+     &::-webkit-slider-thumb {
+         -webkit-appearance: none;
+         appearance: none;
+         width: 25px;
+         height: 25px;
+         background: $colorC;
+         cursor: pointer;
+     }
+
+     &::-moz-range-thumb {
+         width: 25px;
+         height: 25px;
+         background: $colorC;
+         cursor: pointer;
+     }
+ }
+
+ .fileChoose {
+     height: 0;
+     overflow: hidden;
+     width: 0;
+ }
+
+ .fileChoose+label {
+     background: $colorB;
+     border: none;
+     border-radius: 5px;
+     color: $text;
+     cursor: pointer;
+     display: inline-block;
+     font-size: inherit;
+     font-weight: 500;
+     margin-bottom: 1rem;
+     outline: none;
+     padding: 1rem 50px;
+     position: relative;
+     transition: all 0.3s;
+     vertical-align: middle;
+
+     &:hover {
+         background-color: darken($colorC, 10%);
+     }
+ }

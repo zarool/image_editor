@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/png" href="./assets/images/icon.svg" />
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+
+  <title>Image Editor</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <h1>Image Editor</h1>
+    </div>
+
+    <div class="box file-choose">
+      <input type="file" class="fileChoose" id="file" accept="image/*" />
+      <label for="file">choose a file</label>
+    </div>
+
+    <div class="box">
+      <canvas id="img-canvas"></canvas>
+    </div>
+
+    <br>
+    <div class="box options" style="display: none;">
+
+      <p>Sepia:</p><input type="range" min="0" max="100" value="0" class="slider">
+      <p>Grayscale:</p> <input type="range" min="0" max="100" value="0" class="slider">
+      <p>Blur:</p> <input type="range" min="0" max="10" value="0" class="slider">
+      <p>Saturate:</p> <input type="range" min="1" max="100" value="1" class="slider">
+      <p>Contrast:</p> <input type="range" min="0" max="100" value="100" class="slider">
+      <p>Invert:</p> <input type="range" min="0" max="100" value="0" class="slider">
+      <a id="download" download="image.png">
+        <input class="btn" type="button" value="Save image" />
+      </a>
+      <div class="box">
+        <input type="file" class="fileChoose" id="newImg" accept="image/*" />
+        <label for="newImg">New image</label>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script/index.js"></script>
+</body>
+
+</html>
